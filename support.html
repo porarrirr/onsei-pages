@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>サポート — Onsei</title>
+  <meta name="description" content="Onsei のサポート窓口とよくある質問。お問い合わせは onsei@rarari.org。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap inner">
+      <a class="brand" href="index.html">Onsei <span>iOS</span></a>
+      <nav class="nav" aria-label="主要ナビゲーション">
+        <a href="index.html">ホーム</a>
+        <a href="support.html" aria-current="page">サポート</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1 class="page-title">サポート</h1>
+    <p class="page-sub">最終更新日: 2026年7月16日 · 提供者: onsei開発者</p>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">お問い合わせ</h2>
+      <div class="card">
+        <p>
+          メール: <a class="mono" href="mailto:onsei@rarari.org">onsei@rarari.org</a><br>
+          件名の例: <span class="mono">[Onsei] 不具合報告</span> / <span class="mono">[Onsei] 使い方の質問</span>
+        </p>
+        <p>
+          個人開発による提供のため、対応は<strong>ベストエフォート</strong>です。
+          返信期限や解決の保証はいたしません。土日・深夜は対応が遅れることがあります。
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="scope">
+      <h2 id="scope">対応できること / できないこと</h2>
+      <ul>
+        <li><strong>対応し得るもの:</strong> アプリの起動・モデル取得・生成・再生に関する不具合の受付、利用上の一般的な案内</li>
+        <li><strong>対応外:</strong> カスタムモデルの学習代行、商用利用の個別ライセンス交渉、法令適合の法的助言、第三者サービス（Hugging Face・Apple 等）側の障害そのもの</li>
+        <li>サポート対応は日本語を基本とします。</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="report">
+      <h2 id="report">不具合報告のとき</h2>
+      <p>調査に役立つ範囲で、次を記載してください（個人を特定できる情報は必要最小限にしてください）。</p>
+      <ul>
+        <li>端末の機種名</li>
+        <li>iOS のバージョン</li>
+        <li>Onsei のバージョン（設定のライセンス画面等に表示）</li>
+        <li>何をしようとしたか、再現手順</li>
+        <li>エラーメッセージや画面の状況（可能な範囲）</li>
+      </ul>
+      <div class="note">
+        <p>
+          参照用に録音した他人の声データや、機密性の高い文章をメールに添付しないでください。
+          調査に必要な場合でも、同意のない第三者の音声は送らないでください。
+        </p>
+      </div>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">よくある質問</h2>
+
+      <details class="faq">
+        <summary>初回のモデルダウンロードが失敗する</summary>
+        <p>
+          初回は Hugging Face（<span class="mono">huggingface.co</span>）から数 GB のモデルを取得します。
+          安定した Wi‑Fi、十分な空き容量（目安として 3 GB 以上の余裕）、端末のスリープを避けた状態で再度お試しください。
+          途中で失敗した場合は、ネットワーク復旧後に再試行すると不足分の取得が進むことがあります。
+          ダウンロード元の障害や地域制限がある場合、提供者側では復旧できないことがあります。
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>オフラインで使えますか？</summary>
+        <p>
+          モデルパックが端末に正しく入っていれば、音声の合成・再生・参照録音はネットワークなしで行えます。
+          初回のモデル取得や、設定画面からの出典リンク閲覧には接続が必要です。
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>マイクの許可を求められた</summary>
+        <p>
+          声クローン用の<strong>参照音声の録音</strong>にのみ使用します。
+          許可しなくても、参照なしの合成や、ファイルから参照音声を読み込む使い方は可能な場合があります。
+          iOS の「設定」→「プライバシーとセキュリティ」→「マイク」から変更できます。
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>生成が遅い / 熱い / 電池が減る</summary>
+        <p>
+          オンデバイス推論は負荷が大きい処理です。ステップ数や長さを下げると負荷が軽減されることがあります。
+          端末の性能や温度により時間がかかるのは想定内です。過熱が続く場合は生成を中断し、端末を冷やしてから再開してください。
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>モデルや参照音声はどこに保存されますか？</summary>
+        <p>
+          モデルはアプリの Application Support 領域、参照音声は Documents 配下（ファイル共有が有効な場合、Finder 等から見えることがあります）、生成結果は一時領域に保存される実装です。
+          アプリを削除すると、通常これらも端末から削除されます。詳細は
+          <a href="privacy.html">プライバシーポリシー</a> を参照してください。
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>他人の声をクローンしてよいですか？</summary>
+        <p>
+          <strong>本人の明示的な同意がある場合に限り</strong>使用してください。
+          なりすまし、詐欺、権利侵害、誤認を狙った利用は禁止です。詳細は
+          <a href="terms.html">利用規約</a> を必ず読んでください。
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>生成した音声は自動でウォーターマークされますか？</summary>
+        <p>
+          現在の iOS 版では、SilentCipher 等による透かしは付与しません。
+          合成音声であることを必要に応じて明示する責任は利用者にあります。
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>個人情報は収集されますか？</summary>
+        <p>
+          提供者は、合成用テキストや参照音声・生成音声をサーバーに収集する仕組みをアプリに設けていません。
+          モデル取得時に通信先（Hugging Face）が接続メタデータを処理し得る点は
+          <a href="privacy.html">プライバシーポリシー</a> に記載しています。
+        </p>
+      </details>
+    </section>
+
+    <section aria-labelledby="legal-links">
+      <h2 id="legal-links">関連文書</h2>
+      <ul>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="terms.html">利用規約</a></li>
+        <li><a href="index.html">アプリ紹介</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap inner">
+      <nav aria-label="フッター">
+        <a href="index.html">ホーム</a>
+        <a href="support.html">サポート</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+      </nav>
+      <p>© 2026 onsei開発者 · お問い合わせ: <a href="mailto:onsei@rarari.org">onsei@rarari.org</a></p>
+      <p class="disclaimer-foot">
+        本ページ群は App Store 提出用の情報提供であり、弁護士による個別の法的助言ではありません。
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Onsei — オンデバイス日本語音声合成</title>
+  <meta name="description" content="Onsei は端末内で完結する日本語テキスト読み上げ・声クローンアプリです。合成処理はサーバーに送りません。">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap inner">
+      <a class="brand" href="index.html">Onsei <span>iOS</span></a>
+      <nav class="nav" aria-label="主要ナビゲーション">
+        <a href="index.html" aria-current="page">ホーム</a>
+        <a href="support.html">サポート</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <h1>端末の中で、声をつくる。</h1>
+      <p class="lead">
+        <strong>Onsei</strong> は、日本語テキストをその場で音声に変換する iOS アプリです。
+        推論はすべてオンデバイス。入力した文章や参照音声を、提供者が運営するサーバーへ送信しません。
+      </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="support.html">サポート</a>
+        <a class="btn btn-ghost" href="privacy.html">プライバシーポリシー</a>
+        <a class="btn btn-ghost" href="terms.html">利用規約</a>
+      </div>
+      <p class="meta">App Store 公開準備中 · 提供者: onsei開発者</p>
+    </div>
+
+    <section aria-labelledby="features">
+      <h2 id="features">主な機能</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>テキストから音声</h3>
+          <p>日本語テキストを入力し、端末内の音声合成モデルで WAV を生成・再生します。</p>
+        </div>
+        <div class="card">
+          <h3>任意の声クローン</h3>
+          <p>マイク録音または音声ファイルを参照し、話し方に近い音声を合成できます。本人の明示的な同意がある場合にのみ使用してください。</p>
+        </div>
+        <div class="card">
+          <h3>表情・スタイル</h3>
+          <p>絵文字による話し方のコントロールや、モデルによってはキャプションによる VoiceDesign に対応します。</p>
+        </div>
+        <div class="card">
+          <h3>オフライン生成</h3>
+          <p>モデルを一度端末に取得すれば、合成そのものはネットワークなしで実行できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="how">
+      <h2 id="how">仕組み（簡潔に）</h2>
+      <ul>
+        <li>エンジンは <strong>Irodori-TTS</strong> 系モデルを ONNX に変換したパックと、<strong>ONNX Runtime</strong> による端末内推論です。</li>
+        <li>初回起動時などに、Hugging Face 上の配布リポジトリからモデルパック（おおよそ 2〜3 GB）を HTTPS で取得します。Wi‑Fi と十分な空き容量を推奨します。</li>
+        <li>合成に使うテキスト・参照音声・生成結果は、アプリの設計上、提供者のサーバーへアップロードされません。</li>
+        <li>アカウント登録・広告・トラッキング SDK・アプリ内課金は、現バージョンでは使用していません。</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="requirements">
+      <h2 id="requirements">動作環境（目安）</h2>
+      <ul>
+        <li>iOS 17 以降</li>
+        <li>メモリに余裕のある iPhone / iPad（大型モデルのため、余裕のある端末を推奨）</li>
+        <li>初回のモデル取得時はインターネット接続と、数 GB 程度の空き容量</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="responsible">
+      <h2 id="responsible">責任ある利用</h2>
+      <div class="note warn">
+        <p>
+          本人の<strong>明示的な同意なく</strong>他人の声を複製したり、なりすましに使ったりしないでください。
+          誤情報の拡散や、相手を誤認させるディープフェイク目的の利用は禁止です。
+          合成音声であることは、状況に応じて明示し、適用される法令を守ってください。
+        </p>
+      </div>
+      <p>詳細は <a href="terms.html">利用規約</a> をご確認ください。</p>
+    </section>
+
+    <section aria-labelledby="disclaimer">
+      <h2 id="disclaimer">免責の概要</h2>
+      <p>
+        Onsei および関連モデルは、現状有姿（AS IS）で提供されます。
+        生成音声の品質・正確性・特定用途への適合性、第三者の権利非侵害、中断のない動作は保証しません。
+        利用は利用者ご自身の責任で行ってください。責任の制限の詳細は
+        <a href="terms.html">利用規約</a> に定めます。
+      </p>
+    </section>
+
+    <section aria-labelledby="links">
+      <h2 id="links">関連リンク</h2>
+      <ul>
+        <li><a href="support.html">サポート・FAQ</a></li>
+        <li><a href="privacy.html">プライバシーポリシー</a></li>
+        <li><a href="terms.html">利用規約</a></li>
+        <li><a href="https://huggingface.co/raratu/Onsei-iOS-Models" rel="noopener noreferrer">配布モデルリポジトリ（Hugging Face）</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap inner">
+      <nav aria-label="フッター">
+        <a href="index.html">ホーム</a>
+        <a href="support.html">サポート</a>
+        <a href="privacy.html">プライバシー</a>
+        <a href="terms.html">利用規約</a>
+      </nav>
+      <p>© 2026 onsei開発者 · お問い合わせ: <a href="mailto:onsei@rarari.org">onsei@rarari.org</a></p>
+      <p class="disclaimer-foot">
+        本ページ群は App Store 提出用の情報提供であり、弁護士による個別の法的助言ではありません。
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
