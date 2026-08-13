@@ -1,19 +1,22 @@
 # Onsei Pages
 
-[Onsei](https://github.com/porarrirr)（オンデバイス日本語音声合成）の App Store 向け公開ページです。GitHub Pages で配信します。
+English | [日本語](README.ja.md)
 
-| ファイル | 内容 |
-|----------|------|
-| `index.html` | ランディング |
-| `support.html` | サポート |
-| `privacy.html` | プライバシーポリシー |
-| `terms.html` | 利用規約 |
-| `styles.css` | 共通スタイル |
+The public website for Onsei, an iOS app for on-device Japanese speech synthesis. The site introduces the app and publishes the support, privacy, and legal information required for App Store distribution.
 
-## ローカル確認
+Because synthesis is designed to run on the device, the app can generate Japanese speech without relying on a project-operated synthesis server after the required local resources are available.
 
-```sh
+## Published pages
+
+- `index.html` — product introduction
+- `support.html` — support information
+- `privacy.html` — privacy policy
+- `terms.html` — terms of use
+
+## Local preview
+
+```bash
 python3 -m http.server 8765
 ```
 
-http://localhost:8765/ を開いて確認してください。
+Then open http://localhost:8765/.
